@@ -13,9 +13,9 @@
     var parameters = location.search.substring(1).split("&");
 function GetWord()
 {
-    var temp = parameters[0].split("%22");
+    var temp = parameters[0].split("=");
    
-    var q = parameters[1];
+    var q = temp[1];
 
 
 	 window.open("https://www.google.co.kr/search?q=" + q + "&newwindow=1&source=lnms&sa=X&ei=9P5mU57zD468kAXBo4HQDA&ved=0CAYQ_AUoAQ&biw=1024&bih=514&tbm=isch&sout=1");
