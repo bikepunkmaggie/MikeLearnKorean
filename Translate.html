@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<html lang="ko">
+	<head>
+	</head>
+	<body style="background-color:grey">
+
+
+
+		<script>
+		
+
+    var parameters = location.search.substring(1).split("&");
+function GetWord()
+{
+    var temp = parameters[0].split("%22");
+   
+    var q = temp[1];
+
+
+	 window.open("https://www.google.co.kr/search?q=" + q + "&newwindow=1&source=lnms&sa=X&ei=9P5mU57zD468kAXBo4HQDA&ved=0CAYQ_AUoAQ&biw=1024&bih=514&tbm=isch&sout=1");
+	 window.open("https://www.verbix.com/webverbix/Korean/" + q + ".html");
+	 window.open("https://www.forvo.com/search-ko/" + q);	 
+	 window.open("https://en.dict.naver.com/#/search?query="+q+"&range=all");
+	 window.open("http://www.bluedic.com/" + q);
+	 document.getElementById("WordToGet").value = "";		
+}
+GetWord();
+		</script>
+	</body>
+</html>
