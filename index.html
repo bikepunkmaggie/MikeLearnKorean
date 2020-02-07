@@ -16,15 +16,25 @@ function GetWord()
     var q = temp[1];
 
 	 window.open("https://www.google.co.kr/search?q=" + q + "&newwindow=1&source=lnms&sa=X&ei=9P5mU57zD468kAXBo4HQDA&ved=0CAYQ_AUoAQ&biw=1024&bih=514&tbm=isch&sout=1");
-		document.getElementById("myText").value = "Johnny Bravo";
+		
 }
 GetWord();
+			
+			    //define function
+    function prepareiFrame() {
+        var ifrm = document.createElement("iframe");
+        ifrm.setAttribute("src", "https://en.dict.naver.com/#/search?query=가다");
+        ifrm.style.width = "640px";
+        ifrm.style.height = "480px";
+        document.body.appendChild(ifrm);
+    }
+
+    //call it
+    prepareiFrame()
 		</script>
 		
 		
-<iframe src="https://en.dict.naver.com/#/search?query="+document.getElementById("myText").value>
-  <p>Your browser does not support iframes.</p>
-</iframe>
+
 
 	</body>
 </html>
