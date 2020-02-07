@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
-<html lang="ko">
-	<head>
-	</head>
-
-
-		<script>
-		
+<body>
+    
+</body>
+<script>
 
     var parameters = location.search.substring(1).split("&");
 function GetWord()
@@ -16,14 +13,23 @@ function GetWord()
     var q = temp[1];
 
 	 window.open("https://www.google.co.kr/search?q=" + q + "&newwindow=1&source=lnms&sa=X&ei=9P5mU57zD468kAXBo4HQDA&ved=0CAYQ_AUoAQ&biw=1024&bih=514&tbm=isch&sout=1");
-		
+	foo("https://en.dict.naver.com/#/search?query="+q);	
+	foo("https://www.forvo.com/search-ko/"+q);
+	foo("https://www.verbix.com/webverbix/Korean/"+q+".html");
 }
 GetWord();
-			
-		</script>
-		
+function foo(url) {
+    var iframe = document.createElement("iframe");
+    iframe.src = url;
+    iframe.name = "frame";
+    iframe.height = "600px";
+    iframe.width = "600px";
+    document.body.appendChild(iframe);
+    return frames["frame"].location.host;
+}
+
+	</script>	
 		
 
 
-	</body>
 </html>
